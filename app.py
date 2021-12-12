@@ -19,8 +19,8 @@ mail = Mail(app)
 
 class Contato:
     def __init__(self, nome, email, mensagem):
-        self.nome = nome,
-        self.email = email,
+        self.nome = nome
+        self.email = email
         self.mensagem = mensagem
 
 @app.route('/')
@@ -28,7 +28,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/send', mehods=['GET', 'POST'])
+@app.route('/send', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
         formContato = Contato(
